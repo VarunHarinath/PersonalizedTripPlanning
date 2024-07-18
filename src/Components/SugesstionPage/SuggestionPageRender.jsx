@@ -12,10 +12,6 @@ const SuggestionPageRender = () => {
   };
 
   const renderPlaces = () => {
-    if (destination !== "Hyderabad") {
-      return <p>No data found for {destination}.</p>;
-    }
-
     if (data.categories.hasOwnProperty(activeCategory)) {
       const places = data.categories[activeCategory];
 
@@ -47,7 +43,10 @@ const SuggestionPageRender = () => {
       </div>
       <div className="my-7 ">
         {destination && (
-          <h1 className="text-2xl font-bold">Places in {destination}</h1>
+          <h1 className="text-2xl font-bold">
+            Suggested Places in{" "}
+            <span className="text-sky-600">{destination} </span> to explore!
+          </h1>
         )}
       </div>
 
