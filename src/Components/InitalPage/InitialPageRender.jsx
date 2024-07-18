@@ -108,6 +108,11 @@ const InitialPageRender = () => {
                         ? "bg-sky-500 hover:bg-sky-400 active:bg-sky-600"
                         : "bg-gray-500 cursor-not-allowed"
                     }`}
+                    title={
+                      !destination
+                        ? "Please select the destination for suggestions"
+                        : ""
+                    }
                     disabled={!destination}
                   >
                     click here
